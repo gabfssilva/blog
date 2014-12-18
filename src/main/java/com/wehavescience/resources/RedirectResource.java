@@ -16,7 +16,7 @@ public class RedirectResource {
     @Inject
     private RedirectionRule redirectRule;
 
-    @PostConstruct
+//    @PostConstruct
     public void init(){
         get("/*/*/*/:resourceName", (req, resp) -> {
             resp.redirect("/rs/articles/".concat(redirectRule.resource(req.params(":resourceName"))));

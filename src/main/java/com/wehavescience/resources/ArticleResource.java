@@ -10,6 +10,7 @@ import com.wehavescience.resources.exceptions.ResourceNotFoundException;
 import com.wehavescience.utils.JsonTransformer;
 import com.wehavescience.utils.JsonUtils;
 import spark.ModelAndView;
+import spark.Route;
 import spark.template.mustache.MustacheTemplateEngine;
 
 import javax.annotation.PostConstruct;
@@ -52,9 +53,9 @@ public class ArticleResource {
             return articleRepository.findOneBy("title", article.title());
         }, jsonTransformer);
 
-        get("/rs/articles/search/:query", (req, resp) -> new ModelAndView(new Articles().articles(articleRepository.findAnythingThatContains(req.params(":query"))), "templates/articles.mustache"), new MustacheTemplateEngine());
+        get("/rs/articles", (req, resp) -> new ModelAndView(new Articles().articles(articleRepository.findAnythingThatContains(req.queryParams("query"))), "articles.mustache"), new MustacheTemplateEngine());
 
-        get("/rs/articles/tags/:tag", (req, resp) -> new ModelAndView(new Articles().articles(articleRepository.findAllByTag(req.params(":tag"))), "templates/articles.mustache"), new MustacheTemplateEngine());
+        get("/rs/articles/tags/:tag", (req, resp) -> new ModelAndView(new Articles().articles(articleRepository.findAllByTag(req.params(":tag"))), "articles.mustache"), new MustacheTemplateEngine());
 
         put("/rs/articles/:resource/comments/:authorEmail/approve", (req, resp) -> {
             Article article = articleRepository.findByResource(req.params(":resource"));

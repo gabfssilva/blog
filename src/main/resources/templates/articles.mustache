@@ -1,60 +1,7 @@
-<!DOCTYPE HTML>
-<!--
-	Strongly Typed by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Artigo encontrados</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="/resources/css/ie/html5shiv.js"></script><![endif]-->
-		<script src="/js/jquery.min.js"></script>
-		<script src="/js/jquery.dropotron.min.js"></script>
-		<script src="/js/skel.min.js"></script>
-		<script src="/js/skel-layers.min.js"></script>
-		<script src="/js/init.js"></script>
-			<link rel="stylesheet" href="/css/skel.css" />
-			<link rel="stylesheet" href="/css/style.css" />
-			<link rel="stylesheet" href="/css/style-desktop.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-    </head>
-	<body class="no-sidebar">
-
-		<!-- Main -->
+    {{> header}}
+    <body>
         <div id="main-wrapper">
-            <div class="container" style="text-align: center">
-                <nav id="nav">
-                    <ul>
-                        <li><a class="icon fa-home" href="../home"><span>Introduction</span></a></li>
-                        <li><a class="icon fa-coffee" href="/rs/articles/tags/Java"><span>Java</span></a></li>
-                        <li><a class="icon fa-coffee" href="/rs/articles/tags/CDI"><span>CDI</span></a></li>
-                        <li><a class="icon fa-coffee" href="/rs/articles/tags/EJB 3"><span>EJB 3</span></a></li>
-                        <li><a class="icon fa-coffee" href="/rs/articles/tags/JPA"><span>JPA</span></a></li>
-                        <li><a class="icon fa-coffee" href="/rs/articles/tags/Spring"><span>Spring</span></a></li>
-                        <li>
-                            <a href="" class="icon fa-coffee"><span>Web Services</span></a>
-                            <ul>
-                                <li><a class="icon fa-coffee" href="/rs/articles/tags/REST"><span>REST</span></a></li>
-                                <li><a class="icon fa-coffee" href="/rs/articles/tags/SOAP"><span>SOAP</span></a></li>
-                            </ul>
-                        </li>
-                        <br/>
-                        <li><a class="icon fa-coffee" href="/rs/articles/tags/JMS"><span>JMS</span></a></li>
-                        <li><a class="icon fa-coffee" href="/rs/articles/tags/Design Patterns"><span>Design Patterns</span></a></li>
-                        <li><a class="icon fa-coffee" href="/rs/articles/tags/JSF"><span>JSF</span></a></li>
-                        <li><a class="icon fa-coffee" href="/rs/articles/tags/jsapi"><span>Reconhecimento e Síntese de voz</span></a></li>
-                        <li><a class="icon fa-coffee" href="/rs/articles/tags/Generics"><span>Generics</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <br/>
-            <br/>
-
             <div id="main" class="container small">
                 <div id="content">
                     {{#articles}}
@@ -73,65 +20,6 @@
                 </div>
             </div>
         </div>
-
-		<!-- Footer -->
-			<div id="footer-wrapper">
-				<div id="footer" class="container small">
-					<header>
-                        <h2>Sobre o autor...</h2>
-					</header>
-                    <br/>
-					<div class="row">
-						<div class="6u">
-							<section>
-								<form method="post" action="#">
-									<div class="row half">
-										<div class="12u">
-											<img src="/images/gabriel.png" alt="" />
-										</div>
-									</div>
-								</form>
-							</section>
-						</div>
-						<div class="6u">
-							<section>
-                                <p>Gabriel Francisco, bacharel em Ciência da Computação, pós graduando em
-                                    Engenharia de Software Orientada para Serviços na IBTA, analista de sistemas na UOL,
-                                    blogueiro, com interesses em desenvolvimento de software, ciência, música e informação em geral.</p>
-								<div class="row">
-									<ul class="icons 6u">
-										<li class="icon fa-twitter">
-											<a target="_blank" href="http://twitter.com/gabfssilva">@gabrielfss</a>
-										</li>
-										<li class="icon fa-instagram">
-											<a target="_blank" href="http://instagram.com/kcobainnn">instagram.com/kcobainnn</a>
-										</li>
-										<li class="icon fa-facebook">
-											<a target="_blank" href="http://facebook.com/gabrielfss">facebook.com/gabrielfss</a>
-										</li>
-										<li class="icon fa-linkedin">
-											<a target="_blank" href="http://br.linkedin.com/pub/gabriel-francisco/61/7b0/84/">linkedin.com/gabriel-francisco</a>
-										</li>
-									</ul>
-								</div>
-							</section>
-						</div>
-					</div>
-				</div>
-				<div id="copyright" class="container">
-					<ul class="links">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-                <script>
-            var editor = CodeMirror.fromTextArea('code', {
-              height: "150px",
-              path: "/css/codemirror.js",
-              textWrapping: true
-            });
-        </script>
-			</div>
-
-
-	</body>
+    </body>
+    {{> footer}}
 </html>
